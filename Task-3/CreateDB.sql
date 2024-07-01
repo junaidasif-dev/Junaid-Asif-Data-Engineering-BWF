@@ -1,3 +1,13 @@
+CREATE TYPE ss_enum AS ENUM ('active', 'inactive');
+
+CREATE TABLE Cities (
+    city_id varchar(50) PRIMARY KEY,
+    name varchar(30),
+	province varchar(50),
+	country varchar(50),
+    status ss_enum
+);
+
 CREATE TYPE status_enum AS ENUM ('active', 'inactive', 'blacklisted');
 
 CREATE TABLE Categories (
